@@ -9,7 +9,6 @@ import com.todolist1.toDoList.model.Tasks;
 
 @Repository
 public interface TasksRepository extends JpaRepository<Tasks, Long>{
-	
 	public List<Tasks> findAllByTituloContainingIgnoreCase (String titulo);
 
 }

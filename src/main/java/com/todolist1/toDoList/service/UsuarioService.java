@@ -14,6 +14,7 @@ import com.todolist1.toDoList.model.UserLogin;
 import com.todolist1.toDoList.model.Usuario;
 import com.todolist1.toDoList.repository.UsuarioRepository;
 
+
 @Service
 public class UsuarioService {
 	
@@ -31,6 +32,7 @@ public class UsuarioService {
 	
 	
 	public Optional<UserLogin> Logar(Optional<UserLogin> user) {
+		
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		Optional<Usuario> usuario = repository.findByUsuario(user.get().getEmail());
 		
